@@ -13,46 +13,27 @@ document.addEventListener('scroll', () => {
     }
 });
 
-const homeBtn = document.querySelector('.Home__button');
-const home = document.querySelector('#home');
-
-homeBtn.addEventListener('click', () => {
-    home.scrollIntoView({behavior: "smooth", block: "center", inline:"nearest"}); 
+// Handle scrolling when tapping on the navbar menu
+const navbarMenu = document.querySelector('.navbar__menu');
+navbarMenu.addEventListener('click', (event) => {
+    
+    const target = event.target;
+    const link = target.dataset.link;
+    
+    if (link == null) {
+        return;
+    }
+    scrollIntoView(link);
 });
 
 
-
-const aboutBtn = document.querySelector('.about__button');
-const about = document.querySelector('#about');
-
-aboutBtn.addEventListener('click', () => {
-    about.scrollIntoView({behavior: "smooth", block: "center", inline:"nearest"}); 
-});
-
-
-const skillsBtn=  document.querySelector('.skills__button');
-const skills = document.querySelector('#skills');
-
-skillsBtn.addEventListener('click', ()=> {
-    skills.scrollIntoView({behavior: "smooth", block: "center", inline:"nearest"});
-});
-
-
-const workBtn=  document.querySelector('.work__button');
-const work = document.querySelector('#work');
-
-workBtn.addEventListener('click', ()=> {
-    work.scrollIntoView({behavior: "smooth", block: "center", inline:"nearest"});
-});
-
-const contactBtn=  document.querySelector('.contact__button');
-const contact = document.querySelector('#contact');
+// Handle click on "contact me" button on home
 const homeContactBtn = document.querySelector(".home__contact");
-
-contactBtn.addEventListener('click', ()=> {
-    contact.scrollIntoView({behavior: "smooth", block: "center", inline:"nearest"});
-});
-
 homeContactBtn.addEventListener('click', ()=> {
-    contact.scrollIntoView({behavior: "smooth", block: "center", inline:"nearest"});
+    scrollIntoView('#contact')
 });
+
+function scrollIntoView(selector) {
+    const scrollTo = document.querySelector(selector);
+    scrollTo.scrollIntoView({behavior: "smooth", block: "center"});
+}
