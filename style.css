@@ -7,6 +7,7 @@
   --color-light-orange: #fcd386;
   --color-salmon: #ffa07a;
   --color-pink: #ffd1d1;
+  --color-dark-pink: #ffbdbd;
   --color-blue: #a9c4ff;
   --color-dark-blue: #99b6f6;
   --color-light-gray: #c8cacf;
@@ -179,6 +180,27 @@ p {
   padding: 8px 12px;
   border: 2px solid var(--color-white);
   border-radius: var(--color-white);
+}
+
+.arrow_up_button {
+  position: fixed;
+  width: 65px;
+  height: 65px;
+  right: 30px;
+  bottom: 30px;
+  line-height: 50%;
+  font-size: var(--font-medium);
+  color: transparent;
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all var(--animation-duration) ease-in-out;
+}
+
+.arrow_up_button_dark {
+  color: var(--color-white);
+  background-color: var(--color-dark-pink);
 }
 
 /* Section common */

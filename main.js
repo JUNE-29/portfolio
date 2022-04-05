@@ -46,3 +46,17 @@ function scrollIntoView(selector) {
     const scrollTo = document.querySelector(selector);
     scrollTo.scrollIntoView({behavior: "smooth", block: "center"});
 }
+
+// Arrow up button
+const arrowUpBtn = document.querySelector(".arrow_up_button");
+document.addEventListener('scroll', () => {
+    if(window.scrollY > homeHeight) {
+        arrowUpBtn.classList.add('arrow_up_button_dark');
+    } else {
+        arrowUpBtn.classList.remove('arrow_up_button_dark');
+    }
+});
+
+arrowUpBtn.addEventListener('click', ()=> {
+    scrollIntoView('#home');
+});
