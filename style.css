@@ -182,27 +182,6 @@ p {
   border-radius: var(--color-white);
 }
 
-.arrow_up_button {
-  position: fixed;
-  width: 65px;
-  height: 65px;
-  right: 30px;
-  bottom: 30px;
-  line-height: 50%;
-  font-size: var(--font-medium);
-  color: transparent;
-  background-color: transparent;
-  padding: 20px;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: all var(--animation-duration) ease-in-out;
-}
-
-.arrow_up_button_dark {
-  color: var(--color-white);
-  background-color: var(--color-dark-pink);
-}
-
 /* Section common */
 .section {
   padding: 50px;
@@ -452,6 +431,29 @@ p {
 .contact__links i:hover {
   transform: scale(1.1);
   color: var(--color-yellow);
+}
+
+/* Scroll */
+.arrow_up_button {
+  position: fixed;
+  width: 65px;
+  height: 65px;
+  right: 30px;
+  bottom: 30px;
+  line-height: 50%;
+  font-size: var(--font-medium);
+  padding: 20px;
+  border-radius: 50%;
+  pointer-events: none;
+  color: var(--color-white);
+  background-color: var(--color-dark-pink);
+  opacity: 0;
+  transition: all var(--animation-duration) ease-in-out;
+}
+
+.arrow_up_button.visible {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 /* For below 768px screen width */

@@ -47,13 +47,13 @@ function scrollIntoView(selector) {
     scrollTo.scrollIntoView({behavior: "smooth", block: "center"});
 }
 
-// Arrow up button
+// show "arrow up" button when scrolling down
 const arrowUpBtn = document.querySelector(".arrow_up_button");
 document.addEventListener('scroll', () => {
     if(window.scrollY > homeHeight) {
-        arrowUpBtn.classList.add('arrow_up_button_dark');
+        arrowUpBtn.classList.add('visible');
     } else {
-        arrowUpBtn.classList.remove('arrow_up_button_dark');
+        arrowUpBtn.classList.remove('visible');
     }
 });
 
