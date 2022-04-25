@@ -65,6 +65,13 @@ workBtnContainer.addEventListener('click', (event) => {
     if (category == null) {
         return;
     }
+
+    // Remove selection from the previous item and select the new one
+    const active = document.querySelector('.category__btn.selected');
+    active.classList.remove('selected');
+    const target = event.target.nodeName === 'BUTTON' ? event.target : event.target.parentNode;
+    target.classList.add('selected');
+
     projectContainer.classList.add('anime-out');
     setTimeout(()=> {
         projects.forEach((project) => {
@@ -76,8 +83,6 @@ workBtnContainer.addEventListener('click', (event) => {
          });
        projectContainer.classList.remove('anime-out');
     },300)
- 
-
 });
 
 function scrollIntoView(selector) {
