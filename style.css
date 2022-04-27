@@ -180,6 +180,10 @@ p {
   border-radius: var(--color-white);
 }
 
+.home__contact:hover {
+  background-color: var(--color-light-orange);
+}
+
 /* Section common */
 .section {
   padding: 50px;
@@ -451,7 +455,7 @@ p {
   right: 30px;
   bottom: 30px;
   line-height: 50%;
-  font-size: var(--font-medium);
+  font-size: 28px;
   padding: 20px;
   border-radius: 50%;
   pointer-events: none;
@@ -468,6 +472,15 @@ p {
 
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
+  :root {
+      /* Font size */
+  --font-large: 30px;
+  --font-medium: 18px;
+  --font-regular: 16px;
+  --font-small: 14px;
+  --font-micro: 12px;
+  }
+
   .navbar__toole-btn {
     display: block;
   }
@@ -493,8 +506,14 @@ p {
     display: block;
   }
 
+  .section {
+    padding: 16px;
+  }
+
   .about__majors {
     flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 0px;
   }
 
   .major {
@@ -503,6 +522,10 @@ p {
 
   .skillset {
     flex-direction: column;
+  }
+
+  .category__btn {
+    padding: 8px;
   }
 
   .project {
