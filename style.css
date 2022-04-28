@@ -322,6 +322,7 @@ p {
   border-radius: var(--size-border-radius);
   font-size: var(--font-regular);
   padding: 8px 48px;
+  position: relative;
 }
 
 .category__btn.selected,
@@ -344,9 +345,9 @@ p {
   height: 24px;
   display: inline-block;
   line-height: 24px;
-  position: relative;
+  position: absolute;
   top: -20px;
-  left: 4px;
+  right: 16px;
   opacity: 0;
   transition: all var(--animation-duration) ease-in;
 }
@@ -473,7 +474,7 @@ p {
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
   :root {
-      /* Font size */
+  /* Font size */
   --font-large: 30px;
   --font-medium: 18px;
   --font-regular: 16px;
@@ -483,6 +484,9 @@ p {
 
   .navbar__toole-btn {
     display: block;
+    top: 17px;
+    right: 17px;
+    font-size: var(--font-medium);
   }
 
   #navbar {
@@ -508,6 +512,7 @@ p {
 
   .section {
     padding: 16px;
+    padding-top: 40px;
   }
 
   .about__majors {
@@ -525,10 +530,21 @@ p {
   }
 
   .category__btn {
-    padding: 8px;
+    margin: 4px;
+    width: 100%;
   }
 
   .project {
     flex-grow: 1;
   }
-}
+
+  .arrow_up_button{
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    line-height: 50%;
+    right: 15px;
+    bottom: 15px;
+    padding: 0px;
+    }
+  }
